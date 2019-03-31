@@ -1762,7 +1762,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb826;
+  background: #f0a229;
 }
 .feed-link,
 .chat {
@@ -2473,17 +2473,21 @@ embed {
 }
 .headband {
   height: 1.5px;
-  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
+/* background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%); */
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+body {
+  background-image: url("/images/sakura.png");
 }
 .header {
   line-height: 1.5;
 }
-.container {
-  background-color: rgba(0,0,0,0.75);
-}
 .header-inner {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+.post-type-normal {
+  background: rgba(255,255,255,0.6);
 }
 .posts-expand {
   padding-top: 80px;
@@ -2498,7 +2502,8 @@ embed {
   width: 100%;
 }
 .site-meta {
-  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
+/* background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%); */
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
 }
 .brand {
   background-color: rgba(255,255,255,0);
@@ -2512,6 +2517,18 @@ embed {
   line-height: 80px;
   letter-spacing: 3px;
 }
+.post-body a {
+  color: #6975a7;
+  text-decoration: none;
+  border-bottom: 1px dashed #6465a5;
+  background-color: transparent;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.post-body a: hover {
+  color: #f15838;
+  border-bottom: 1px dashed #f28a31;
+}
 .site-subtitle {
   margin: 0px;
   font-size: 16px;
@@ -2521,14 +2538,14 @@ embed {
   color: #fff;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-bottom-color: #a166ab;
+  border-bottom-color: #99c;
 }
 .menu {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 5px;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(204,255,255,0.65);
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
 }
 .menu .menu-item a {
@@ -2538,7 +2555,7 @@ embed {
   margin: 5px 15px;
 }
 .menu .menu-item a:hover {
-  border-bottom-color: rgba(161,102,171,0);
+  border-bottom-color: rgba(0,0,0,0);
 }
 .post {
   margin-bottom: 50px;
