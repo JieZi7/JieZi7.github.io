@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta name="keywords" content="计算机科学,信息安全">
+  <meta name="description" content="操作系统 线程线程—-一种CPU利用的基本单元，它是形成多线程计算机的基础。 讨论Pthread API、Win32 API和JAVA线程库。 线程由线程ID、程序计数器(PC)、寄存器集合和栈组成。 多线程进程中的线程共享 代码、数据、文件。">
+<meta name="keywords" content="操作系统 线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://JieZi7.github.io/uncategorized2019/03/31/hello-world.html">
+<meta property="og:title" content="操作系统 线程">
+<meta property="og:url" content="https://JieZi7.github.io/Know-More2019/03/31/OS-THREAD.html">
 <meta property="og:site_name" content="RedOranges">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="操作系统 线程线程—-一种CPU利用的基本单元，它是形成多线程计算机的基础。 讨论Pthread API、Win32 API和JAVA线程库。 线程由线程ID、程序计数器(PC)、寄存器集合和栈组成。 多线程进程中的线程共享 代码、数据、文件。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-31T15:54:47.899Z">
+<meta property="og:updated_time" content="2019-03-31T15:55:12.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="操作系统 线程">
+<meta name="twitter:description" content="操作系统 线程线程—-一种CPU利用的基本单元，它是形成多线程计算机的基础。 讨论Pthread API、Win32 API和JAVA线程库。 线程由线程ID、程序计数器(PC)、寄存器集合和栈组成。 多线程进程中的线程共享 代码、数据、文件。">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://JieZi7.github.io/uncategorized2019/03/31/hello-world">
+  <link rel="canonical" href="https://JieZi7.github.io/Know-More2019/03/31/OS-THREAD">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>Hello World | RedOranges</title>
+  <title>操作系统 线程 | RedOranges</title>
   
 
 
@@ -349,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://JieZi7.github.io/uncategorized2019/03/31/hello-world.html">
+    <link itemprop="mainEntityOfPage" href="https://JieZi7.github.io/Know-More2019/03/31/OS-THREAD.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JieZI7">
@@ -366,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">操作系统 线程
 
               
             
@@ -392,12 +392,34 @@
                 
               
 
-              <time title="创建时间：2019-03-31 16:54:47" itemprop="dateCreated datePublished" datetime="2019-03-31T16:54:47+01:00">2019-03-31</time>
+              <time title="创建时间：2019-03-31 16:34:49 / 修改时间：16:55:12" itemprop="dateCreated datePublished" datetime="2019-03-31T16:34:49+01:00">2019-03-31</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Know-More/" itemprop="url" rel="index"><span itemprop="name">知道的多一点</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -434,15 +456,91 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h4 id="操作系统-线程"><a href="#操作系统-线程" class="headerlink" title="操作系统 线程"></a>操作系统 线程</h4><p>线程—-一种CPU利用的基本单元，它是形成多线程计算机的基础。</p>
+<p>讨论Pthread API、Win32 API和JAVA线程库。</p>
+<p>线程由线程ID、程序计数器(PC)、寄存器集合和栈组成。</p>
+<p>多线程进程中的线程共享 <strong>代码、数据、文件</strong>。<br><a id="more"></a></p>
+<p>多个线程可以<strong>同时</strong>处理不同的任务，也可以处理相同的任务。</p>
+<p>优点：</p>
+<ol>
+<li>响应度高；对于用户的响应度，用户不会被进程的其他操作所耽误。</li>
+<li>资源共享；</li>
+<li>经济；减少了进程的创建。</li>
+<li>多处理器体系结构的利用。增加的并发的功能。</li>
+</ol>
+<p>模型：</p>
+<ol>
+<li>多对一模型；</li>
+<li>一对一模型；开销大。</li>
+<li>多对多模型。</li>
+<li>二级模型。</li>
+</ol>
+<h5 id="线程库"><a href="#线程库" class="headerlink" title="线程库"></a>线程库</h5><ul>
+<li>在用户空间中提供一个没有内核支持的库，此库的所有代码和数据都存在与用户空间中。</li>
+<li>执行一个由操作系统直接支持的内核级的库，此时库的代码和数据结构存在与内核空间中。调用库中的一个API函数通常会导致对内核的系统调用。</li>
+</ul>
+<p>主要的线程库</p>
+<ol>
+<li><p>POSIX Pthread，用户级和内核级。</p>
+<p>线程行为的规范。任意实现。</p>
+</li>
+<li><p>Win32，内核库</p>
+</li>
+<li><p>Java，使用宿主系统上的线程库来实现。</p>
+</li>
+</ol>
+<h5 id="多线程问题"><a href="#多线程问题" class="headerlink" title="多线程问题"></a>多线程问题</h5><ol>
+<li>系统调用fork()和exec()</li>
+</ol>
+<p>如果调用fork之后立即调用exec，那么没有必要复制所有的线程。因为整个进程都会被替代。</p>
+<ol>
+<li><p>线程取消(thread cancellation)：在线程完成之前终止线程的任务。</p>
+<ol>
+<li>异步取消(asynachronous cancellation)：立即终止。</li>
+<li>延迟取消(deferred cancellation)：目标线程检查它是否应该终止，目标线程以有序方式终止自己。</li>
+</ol>
+<p>取消点(cancellation point)</p>
+<p>操作系统回收取消线程的系统资源，但是通常并不回收所有资源——&gt;异步取消线程并不会是所需要的系统线程空闲。</p>
+</li>
+<li><p>信号处理</p>
+<ol>
+<li>信号是由特定的事件的发生所产生的。</li>
+<li>产生的信号要发送到进程。</li>
+<li><p>一旦发送，信号必须加以处理。</p>
+<p>同步信号：发送到产生信号的==同一进程==；</p>
+<p>异步信号：信号由==运行进程之外==的事件产生。Ctrl+C</p>
+<p>对于一个多线程程序：</p>
+</li>
+<li><p>发送到所应用的线程；</p>
+</li>
+<li>发送到进程内的每一个线程；</li>
+<li>发送到进程内的固定线程；</li>
+<li>规定一个特定线程接收所有信号。</li>
+</ol>
+<p>Windows中异步过程调用(asynchronous procedure call，APC)模拟上述UNIX操作。</p>
+<p>但是APC只发送给特定线程。</p>
+</li>
+<li><p>线程池(thread pool)</p>
+<p>总体思想是创建==一定数量==的线程，放在池中等待工作。</p>
+<p>线程用以唤醒。</p>
+<p>优点：</p>
+<ol>
+<li>快。</li>
+<li>限制了可用线程的数量。</li>
+</ol>
+<p>数量由硬件和并发请求的期望来决定。高级一点的可以动态调整线程数量。</p>
+</li>
+<li><p>线程特定数据(thread-specific data)</p>
+<p>每个线程都有自己的数据，不共享出去。</p>
+</li>
+<li><p>调度程序激活：内核和线程库之间的通信问题</p>
+<p>用户线程 –&gt; 轻量级进程(LWP) –&gt; 内核线程</p>
+<p>调度器激活(scheduler actication)：<br>​    内核提供一组==虚拟处理器==(LWP)给应用程序。</p>
+<p>​    线程在虚拟处理器上运行。</p>
+<p>​    upcall：内核告知与应用程序有关的事件。</p>
+<p>​    upcall由具有==upcall处理句柄==的线程库处理。</p>
+</li>
+</ol>
 
       
     </div>
@@ -463,6 +561,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/操作系统-线程/" rel="tag"># 操作系统 线程</a>
+          
+        </div>
       
 
       
@@ -485,15 +589,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/知道的多一点2019/03/31/操作系统 线程.html" rel="next" title="操作系统 线程">
-                <i class="fa fa-chevron-left"></i> 操作系统 线程
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uncatalog2019/03/31/hello-world.html" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -744,7 +848,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#操作系统-线程"><span class="nav-number">1.</span> <span class="nav-text">操作系统 线程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#线程库"><span class="nav-number">1.1.</span> <span class="nav-text">线程库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多线程问题"><span class="nav-number">1.2.</span> <span class="nav-text">多线程问题</span></a></li></ol></li></ol></div>
             
 
           </div>
