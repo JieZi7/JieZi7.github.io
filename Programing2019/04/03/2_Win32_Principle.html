@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="While no lives not required">
-<meta name="keywords" content="计算机科学,信息安全">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RedOranges">
-<meta property="og:url" content="https://JieZi7.github.io/index.html">
+  <meta name="description" content="1  CPU的保护模式和Windows系统1.1 兼容性与多任务 实模式和虚拟86模式是为了兼容8086处理器 保护模式是80386处理器的主要工作模式  多任务的实现：使用多任务隔离技术来使得每个任务都有自己的独立的地址空间。 在Windows下，任务被进程取代。 1.2  虚拟内存 32位的Windows系统可寻址4GB的地址空间 Windows 为每个进程分配4GB的地址空间 地址空间很大，">
+<meta name="keywords" content="Win32 API函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win32程序运行原理">
+<meta property="og:url" content="https://JieZi7.github.io/Programing2019/04/03/2_Win32_Principle.html">
 <meta property="og:site_name" content="RedOranges">
-<meta property="og:description" content="While no lives not required">
+<meta property="og:description" content="1  CPU的保护模式和Windows系统1.1 兼容性与多任务 实模式和虚拟86模式是为了兼容8086处理器 保护模式是80386处理器的主要工作模式  多任务的实现：使用多任务隔离技术来使得每个任务都有自己的独立的地址空间。 在Windows下，任务被进程取代。 1.2  虚拟内存 32位的Windows系统可寻址4GB的地址空间 Windows 为每个进程分配4GB的地址空间 地址空间很大，">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-03T15:44:04.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RedOranges">
-<meta name="twitter:description" content="While no lives not required">
+<meta name="twitter:title" content="Win32程序运行原理">
+<meta name="twitter:description" content="1  CPU的保护模式和Windows系统1.1 兼容性与多任务 实模式和虚拟86模式是为了兼容8086处理器 保护模式是80386处理器的主要工作模式  多任务的实现：使用多任务隔离技术来使得每个任务都有自己的独立的地址空间。 在Windows下，任务被进程取代。 1.2  虚拟内存 32位的Windows系统可寻址4GB的地址空间 Windows 为每个进程分配4GB的地址空间 地址空间很大，">
 
 
 
@@ -116,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://JieZi7.github.io/">
+  <link rel="canonical" href="https://JieZi7.github.io/Programing2019/04/03/2_Win32_Principle">
 
 
 
@@ -126,7 +127,7 @@
   };
 </script>
 
-  <title>RedOranges</title>
+  <title>Win32程序运行原理 | RedOranges</title>
   
 
 
@@ -174,8 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband">
 <a href="https://github.com/JieZi7"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_green_007200.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 	</div>
@@ -219,7 +219,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -332,9 +332,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -366,10 +366,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Programing2019/04/03/2_Win32_Principle.html" class="post-title-link" itemprop="url">Win32程序运行原理</a>
+          <h1 class="post-title" itemprop="name headline">Win32程序运行原理
+
               
             
           </h1>
@@ -433,6 +431,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -451,9 +456,7 @@
       
 
       
-        
-          
-            <h2 id="1-CPU的保护模式和Windows系统"><a href="#1-CPU的保护模式和Windows系统" class="headerlink" title="1  CPU的保护模式和Windows系统"></a>1  CPU的保护模式和Windows系统</h2><h3 id="1-1-兼容性与多任务"><a href="#1-1-兼容性与多任务" class="headerlink" title="1.1 兼容性与多任务"></a>1.1 兼容性与多任务</h3><ul>
+        <h2 id="1-CPU的保护模式和Windows系统"><a href="#1-CPU的保护模式和Windows系统" class="headerlink" title="1  CPU的保护模式和Windows系统"></a>1  CPU的保护模式和Windows系统</h2><h3 id="1-1-兼容性与多任务"><a href="#1-1-兼容性与多任务" class="headerlink" title="1.1 兼容性与多任务"></a>1.1 兼容性与多任务</h3><ul>
 <li>实模式和虚拟86模式是为了兼容8086处理器</li>
 <li>保护模式是80386处理器的主要工作模式</li>
 </ul>
@@ -527,8 +530,6 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -549,184 +550,48 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://JieZi7.github.io/Know-More2019/03/31/OS-THREAD.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JieZI7">
-      <meta itemprop="description" content="While no lives not required">
-      <meta itemprop="image" content="/uploads/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="RedOranges">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Know-More2019/03/31/OS-THREAD.html" class="post-title-link" itemprop="url">操作系统 线程</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-31 16:34:49 / 修改时间：16:55:12" itemprop="dateCreated datePublished" datetime="2019-03-31T16:34:49+01:00">2019-03-31</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Know-More/" itemprop="url" rel="index"><span itemprop="name">知道的多一点</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Win32-API函数/" rel="tag"># Win32 API函数</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
+      
+        <div class="post-widgets">
         
-          <h4 id="操作系统-线程"><a href="#操作系统-线程" class="headerlink" title="操作系统 线程"></a>操作系统 线程</h4><p>线程—-一种CPU利用的基本单元，它是形成多线程计算机的基础。</p>
-<p>讨论Pthread API、Win32 API和JAVA线程库。</p>
-<p>线程由线程ID、程序计数器(PC)、寄存器集合和栈组成。</p>
-<p>多线程进程中的线程共享 <strong>代码、数据、文件</strong>。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/Know-More2019/03/31/OS-THREAD.html" rel="contents">
-                阅读全文 &raquo;
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Know-More2019/03/31/OS-THREAD.html" rel="next" title="操作系统 线程">
+                <i class="fa fa-chevron-left"></i> 操作系统 线程
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -736,14 +601,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -763,8 +629,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -955,6 +830,23 @@ show_date_time();
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-CPU的保护模式和Windows系统"><span class="nav-number">1.</span> <span class="nav-text">1  CPU的保护模式和Windows系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-兼容性与多任务"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 兼容性与多任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-虚拟内存"><span class="nav-number">1.2.</span> <span class="nav-text">1.2  虚拟内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-内核模式和用户模式"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 内核模式和用户模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-内核对象"><span class="nav-number">2.</span> <span class="nav-text">2  内核对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">2.1  基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-对象句柄"><span class="nav-number">2.2.</span> <span class="nav-text">2.2  对象句柄</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-使用计数"><span class="nav-number">2.3.</span> <span class="nav-text">2.3  使用计数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-进程的创建"><span class="nav-number">3.</span> <span class="nav-text">3  进程的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-进程（Process）和线程（Thread）"><span class="nav-number">3.1.</span> <span class="nav-text">3.1  进程（Process）和线程（Thread）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-应用程序的启动过程"><span class="nav-number">3.2.</span> <span class="nav-text">3.2  应用程序的启动过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-CreateProcess函数"><span class="nav-number">3.3.</span> <span class="nav-text">3.3  CreateProcess函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-例子"><span class="nav-number">3.4.</span> <span class="nav-text">3.4  例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-进程控制"><span class="nav-number">4.</span> <span class="nav-text">4  进程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-获取系统进程"><span class="nav-number">4.1.</span> <span class="nav-text">4.1  获取系统进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-终止进程"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 终止进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护进程"><span class="nav-number">4.3.</span> <span class="nav-text">保护进程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-实例-修改内存数据"><span class="nav-number">5.</span> <span class="nav-text">5  实例 修改内存数据</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -1110,6 +1002,10 @@ show_date_time();
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -1126,6 +1022,8 @@ show_date_time();
   
 
 
+  
+
 
   
 
@@ -1149,6 +1047,25 @@ show_date_time();
   
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 17693,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 
